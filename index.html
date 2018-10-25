@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="keywords" content="вёрстка, лендинг, визитка, создание, проект, код, стиль, сайт">
+    <meta name="description" content="Вёрстка адаптивных сайтов на HTML + CSS">
     <link rel="stylesheet" href="css/style.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Сайт разработчика</title>
 </head>
+
 <body>
+   
     <header>
         
         
@@ -17,8 +24,8 @@
              <tr>
                  
                  <td class = "navtext"><a href="index.html">RY Web-designer</a></td>
-                 <td class = "menu"><a href="#">PORTFOLIO</a></td>
-                 <td class = "menu"><a href="#">CONTACTS</a></td>
+                 <td class = "menu1"><a href="portfolio.html">PORTFOLIO</a></td>
+                 <td class = "menu"><a href="#anchor">CONTACTS</a></td>
                  
                  
              </tr>
@@ -36,7 +43,7 @@
             <tr>
                 
                 
-                <td class = "page">
+                <td class = "page1">
                     <h2>Адаптивный лендинг</h2>
                     
                     <ul>
@@ -45,8 +52,8 @@
                         <li>Оригинальный</li>
                         <li>Качественный</li>
                         <li>Быстрый</li>
-                        <li class = "cost">4000 рублей</li>
-                        <li class="gradient-wrap"><a class="gradient-btn" href="#">Заказать</a></li>
+                        <li class = "cost">от 4000 рублей</li>
+                        <li class="gradient-wrap"><a class="gradient-btn" href="#anchor">Заказать</a></li>
                         
                     </ul>
                     
@@ -55,7 +62,7 @@
                 
                 
                 
-                <td class = "page">
+                <td class = "page2">
                     
                     <h2>Адаптивная визитка</h2>
                     
@@ -65,8 +72,8 @@
                         <li>Оригинальный</li>
                         <li>Информативный</li>
                         <li>Качественный</li>
-                        <li class = "cost" >3000 рублей</li>
-                        <li class="gradient-wrap"><a class="gradient-btn" href="#">Заказать</a></li>
+                        <li class = "cost" >от 3000 рублей</li>
+                        <li class="gradient-wrap"><a class="gradient-btn" href="#anchor">Заказать</a></li>
                         
                     </ul>
                     
@@ -91,21 +98,33 @@
             <tr>
                
                 
-                <td class = "anim"><img src="img/code.png" alt=""></td>
-                <td class = "anim"><img src="img/html.png" alt=""></td>
-                <td class = "anim"><img src="img/css.png" alt=""></td>
-             
+                <td>
+                <ul>
+                <li><img class = "anim1" src="img/code.png" alt = ""></li>
+                <li>Валидный код</li>
+                </ul>
+                </td>
+                
+                <td>
+                <ul>
+                <li><img class = "anim" src="img/html.png" alt = ""></li>
+                <li>Аккуратная разметка</li>
+                </ul>
+                </td>
+                
+                <td>
+                <ul>
+                <li><img class = "anim" src="img/css.png" alt= ""></li>
+                <li>Живые стили</li>
+                </ul>
+                </td>
+                
+                
+  
                 
             </tr>
             
-            <tr>
-                
-                <td>Валидный код</td>
-                <td>Аккуратная разметка</td>
-                <td>Живые стили</td>
-          
-                
-            </tr>
+           
             
         </table>
         
@@ -123,9 +142,46 @@
     </div>
     </div>
     
+<div class = "reply">
     
+    <h1>Для связи и заказа</h1>
     
+    <table>
+        
+        <tr id = "anchor">
+            
+            <td ><a href="https://vk.com/jblwins" target="_blank"><img class = "socials" src="img/vk.png" alt=""></a></td>
+            <td ><a href = "https://www.instagram.com/yakovlev_rrr/"  target="_blank"><img class = "socials" src="img/inst.png" alt=""></a></td>
+            
+        </tr>
+        
+        <tr>
+            
+            <td colspan="2" class = "num">+79132656863</td>
+            
+            
+        </tr>
+        
+        <tr>
+            
+          <td colspan="2" class = "email">rodionyakovlev25@gmail.com</td>
+            
+        </tr>
+        
+    </table>
     
-    
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>
+ $(document).ready(function(){
+    $(".menu, .gradient-wrap").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1100);
+    });
+});
+</script>
+
 </body>
 </html>
